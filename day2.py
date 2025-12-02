@@ -39,9 +39,8 @@ def doZone(start, end):
 
 def doZoneTwo(start, end):
 	res = set()
-	for i in range(1, len(end)):
+	for i in range(1, len(end)//2 + 1):
 		res = res | doPattern(i, start, end)
-	print(res)
 	return sum(res)
 
 def doPattern(size, start, end):
@@ -57,7 +56,6 @@ def doPattern(size, start, end):
 			continue
 		p = firstPatten
 		while True:
-			print(mul, p)
 			number = int(str(p) * mul)
 			if number >= start and number <= end:
 				res.add(number)
@@ -68,4 +66,5 @@ def doPattern(size, start, end):
 				break
 	return res
 
-print(day2t())
+print(day2())
+print(day2t()) #66500947346
