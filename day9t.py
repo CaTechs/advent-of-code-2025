@@ -43,8 +43,8 @@ def day9t():
 
 
 def doBoundary(data):
-	vert = [] # Key : coordonnées en y, value : liste des coordoonées en x des contours verticaux
-	hori = [] # Key : coordonnées en x, value : liste des coordoonées en y des contours horizontaux
+	vert = []
+	hori = []
 	for i in range(len(data) - 1):
 		doLine(data[i], data[i+1], vert, hori)
 	doLine(data[-1], data[0], vert, hori)
